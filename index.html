@@ -70,44 +70,45 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="https://scholar.google.com/citations?user=F4lns_oAAAAJ&hl" target="_blank">Di Qiu</a>,</span>
+                <a href="" target="_blank">Di Qiu</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="https://yzhang2016.github.io/" target="_blank">Zhengcong Fei</a>,</span>
-                  <span class="author-block">
-                    <a href="https://xinntao.github.io/" target="_blank">Rui Wang</a>,
+                  <a href="" target="_blank">Zhengcong Fei</a>,
                   </span>
                   <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=N8mK__gAAAAJ" target="_blank">Mingyuan Fan</a>,
+                    <a href="" target="_blank">Rui Wang</a>,
                   </span>
                   <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=i1PqK7kAAAAJ" target="_blank">Changqian Yu</a>,
+                    <a href="" target="_blank">Mingyuan Fan</a>,
                   </span>
                   <span class="author-block">
-                    <a href="https://scholar.google.com/citations?user=zJvrrusAAAAJ" target="_blank">Xiang Wen</a>
+                    <a href="" target="_blank">Changqian Yu</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="" target="_blank">Guibin Chen</a>,
+                  </span>
+                  <span class="author-block">
+                    <a href="" target="_blank">Xiang Wen</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block"><sup>1</sup>SkyWork AI</span>
+                    <span class="author-block">SkyWork AI</span>
+                    <!-- <br>
+                    <span class="author-block"><sup>*</sup>Corresponding Author</span> 
+                    <br>
+                    <span class="author-block">qiudihk@gmail.com</span> -->
                   </div>
-                  
                   <br>
 
 
               
 
 
-          
-
-
-                    
-
-
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                     <span class="link-block">
-                        <a href="https://arxiv.org/abs/2408.13239" target="_blank"
+                        <a href="" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="ai ai-arxiv"></i>
@@ -117,23 +118,24 @@
                     </span>
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="./Appendix.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <span class="link-block">
-                    <a href="https://github.com/WuTao-CS/CustomCrafter"
+                      <a href=""
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                           <i class="fab fa-github"></i>
                       </span>
                       <span>Code</span>
                       </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href=""
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa fa-smile"></i>
+                      </span>
+                      <span>Demo</span>
+                    </a>
+                  </span>
 
                   </span>
 
@@ -198,7 +200,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Customized video generation aims to generate high-quality videos guided by text prompts and subject's reference images. However, since it is only trained on static images, the fine-tuning process of subject learning disrupts abilities of video diffusion models (VDMs) to combine concepts and generate motions. To restore these abilities, some methods use additional video similar to the prompt to fine-tune or guide the model. This requires frequent changes of guiding videos and even re-tuning of the model when generating different motions, which is very inconvenient for users. In this paper, we propose CustomCrafter, a novel framework that preserves the model's motion generation and conceptual combination abilities without additional video and fine-tuning to recovery. For preserving conceptual combination ability, we design a plug-and-play module to update few parameters in VDMs, enhancing the model's ability to capture the appearance details and the ability of concept combinations for new subjects. For motion generation, we observed that VDMs tend to restore the motion of video in the early stage of denoising, while focusing on the recovery of subject details in the later stage. Therefore, we propose Dynamic Weighted Video Sampling Strategy. Using the pluggability of our subject learning modules, we reduce the impact of this module on motion generation in the early stage of denoising, preserving the ability to generate motion of VDMs. In the later stage of denoising, we restore this module to repair the appearance details of the specified subject, thereby ensuring the fidelity of the subject's appearance. Experimental results show that our method has a significant improvement compared to previous methods.
+            We present SkyActor, a simple yet effective framework based on a diffusion transformer architecture for character image animation. Unlike most existing methods limited to head-only animation,  SkyActor extends animation to half-body compositions, enabling richer and more dynamic character performances. To address primary challenges in character image animation of preserving identity, accurately transferring target motion, and ensuring temporal consistency and fidelity, SkyActor leverages the robust generative capabilities of a DiT-based framework, combining a spatial-alignment mechanism using expression-aware landmarks for precise motion alignment and an expert transformer with adaptive LayerNorm facilitates deep fusion between facial features and video dynamics to enhance identity consistency. Furthermore, a multistage training strategy is designed to improve model performance, progressively improving full body motion integration, expression reconstruction, and temporal consistency refinement. This comprehensive design allows SkyActor to produce high-fidelity, temporally stable animations that are adaptable to diverse compositions, making it suitable for applications such as virtual avatars, video conferencing, and digital content creation.
           </p>
         </div>
       </div>
@@ -285,9 +287,9 @@
       </table> -->
 
         <div>
-          <td colspan="3"><img src="static/images/pipline.png" alt="" width="1000" /></td>
+          <td colspan="3"><img src="static/images/framework.png" alt="" width="1000" /></td>
         </div>
-      <p>Overall review of CustomCrafter. For subject learning, we adopt LoRA to construct Spatial Subject Learning Module, which update the Query, Key, and Value parameters of attention layers in all Spatial Transformer models. In the process of generating videos, we divide the denoising process into two phases: the motion layout repair process and the subject appearance repair process. By reducing the influence of the Spatial Subject Learning Module in the motion layout repair process, and restoring it in the subject appearance repair process to repair the details of the subject. </p>
+      <p>Overall review of SkyActor. </p>
       </div>
         </div>
       </div>
@@ -296,54 +298,214 @@
 </section>
 <!--End paper poster -->
 
-<!-- video preload="auto"carousel -->
-<section class="hero is-small">
+<section class="hero is-small"></section>
   <div class="hero-body">
     <!-- <div class="container is-max-desktop"> -->
       <div class="columns is-centered has-text-centered">
         <div class="column custom-width">
-          <h2 class="title is-3">Comparison with SOTA</h2>
+          <h2 class="title is-3">Introducing SkyActor</h2>
+          <div class="content has-text-justified" align="center">
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+              <div class="item item-video11">
+                <video preload="auto"poster="" id="video11" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/11.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video12">
+                <video preload="auto"poster="" id="video12" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/12.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video13">
+                <video preload="auto"poster="" id="video13" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/13.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video14">
+                <video preload="auto"poster="" id="video14" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/14.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video15">
+                <video preload="auto"poster="" id="video15" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/15.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          </div>
+    
+        </div>
+      </div>
+  </div>
+  <p align="center">Qualitative comparison of customized video generation with both subjects and motions. <br>Without guidance from additional videos, our method significantly outperforms in terms of concept combination.</p>
+</section>
+
+
+<section class="hero is-small"></section>
+  <div class="hero-body">
+    <!-- <div class="container is-max-desktop"> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
           <div class="content has-text-justified" align="center">
             <div id="results-carousel" class="carousel results-carousel" align="center">
               <div class="item item-video1">
                 <video preload="auto"poster="" id="video1" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
-                  <source src="static/videos/web_demo_1.mp4"
+                  <source src="static/videos/1.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video2">
                 <video preload="auto"poster="" id="video2" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
-                  <source src="static/videos/web_demo_2.mp4"
+                  <source src="static/videos/2.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video3">
                 <video preload="auto"poster="" id="video3" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
-                  <source src="static/videos/web_demo_3.mp4"
+                  <source src="static/videos/3.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video4">
                 <video preload="auto"poster="" id="video4" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
-                  <source src="static/videos/web_demo_4.mp4"
+                  <source src="static/videos/4.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video5">
                 <video preload="auto"poster="" id="video5" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
-                  <source src="static/videos/web_demo_5.mp4"
+                  <source src="static/videos/5.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video6">
                 <video preload="auto"poster="" id="video6" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
-                  <source src="static/videos/web_demo_6.mp4"
+                  <source src="static/videos/6.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          </div>
+    
+        </div>
+      </div>
+  </div>
+  <p align="center">Qualitative comparison of customized video generation with both subjects and motions. <br>Without guidance from additional videos, our method significantly outperforms in terms of concept combination.</p>
+</section>
+
+<section class="hero is-small"></section>
+  <div class="hero-body">
+    <!-- <div class="container is-max-desktop"> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <div class="content has-text-justified" align="center">
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+              <div class="item item-video1">
+                <video preload="auto"poster="" id="video1" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/real1.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video2">
+                <video preload="auto"poster="" id="video2" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/real2.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video3">
+                <video preload="auto"poster="" id="video3" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/real3.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video4">
+                <video preload="auto"poster="" id="video4" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/real4.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video5"></div>
+                <video preload="auto"poster="" id="video5" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/real5.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+            </div>
+
+          </div>
+    
+        </div>
+      </div>
+  </div>
+  <p align="center">Qualitative comparison of customized video generation with both subjects and motions. <br>Without guidance from additional videos, our method significantly outperforms in terms of concept combination.</p>
+</section>
+
+
+
+<!-- video preload="auto"carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <!-- <div class="container is-max-desktop"> -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column custom-width">
+          <h2 class="title is-3">Comparison to State-of-the-Art Methods</h2>
+          <div class="content has-text-justified" align="center">
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+              <div class="item item-video1">
+                <video preload="auto"poster="" id="web_demo1" autoplay controls muted loop width="4096px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/web_demo1.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video2">
+                <video preload="auto"poster="" id="web_demo2" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/web_demo2.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video3">
+                <video preload="auto"poster="" id="web_demo3" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/web_demo3.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video4">
+                <video preload="auto"poster="" id="web_demo4" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/web_demo4.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-video5">
+                <video preload="auto"poster="" id="web_demo5" autoplay controls muted loop width="1024px">
+                  <!-- Your video preload="auto"file here -->
+                  <source src="static/videos/web_demo5.mp4"
                   type="video/mp4">
                 </video>
               </div>
@@ -371,11 +533,15 @@
           <div class="content has-text-justified">
             <p>
               <a name="customdiffusion" id="customdiffusion"></a>
-              [1] Nupur Kumari, Bingliang Zhang, Richard Zhang, Eli Shechtman, and Jun-Yan Zhu. Multi-concept customization of text-to-image diffusion CVPR, 2023.
+              [1] Jianzhu Guo, Dingyun Zhang, Xiaoqiang Liu, Zhizhou Zhong, Yuan Zhang, Pengfei Wan, Di Zhang. LivePortrait: Efficient Portrait Animation with Stitching and Retargeting Control.
             </p>
             <p>
               <a name="dreamvideo" id="dreamvideo"></a>
-              [2] Yujie Wei, Shiwei Zhang, Zhiwu Qing, Hangjie Yuan, Zhiheng Liu, Yu Liu, Yingya Zhang, Jingren Zhou, and Hongming Shan. Dreamvideo: Composing your dream videos with customized subject and motion. CVPR, 2024.
+              [2] Yue Ma, Hongyu Liu, Hongfa Wang, Heng Pan, Yingqing He, Junkun Yuan, Ailing Zeng, Chengfei Cai, Heung-Yeung Shum, Wei Liu, Qifeng Chen. Follow-Your-Emoji: Fine-Controllable and Expressive Freestyle Portrait Animation. Siggraph Asia 2024
+            </p>
+            <p>
+              <a name="dreamvideo" id="dreamvideo"></a>
+              [3] https://app.runwayml.com/
             </p>
   
           </div>
@@ -387,7 +553,7 @@
 
 
 <!--BibTex citation -->
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>
@@ -399,7 +565,7 @@
       }
     </code></pre>
   </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 <footer class="footer">
