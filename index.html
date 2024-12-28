@@ -200,7 +200,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present SkyActor, a simple yet effective framework based on a diffusion transformer architecture for character image animation. Unlike most existing methods limited to head-only animation,  SkyActor extends animation to half-body compositions, enabling richer and more dynamic character performances. To address primary challenges in character image animation of preserving identity, accurately transferring target motion, and ensuring temporal consistency and fidelity, SkyActor leverages the robust generative capabilities of a DiT-based framework, combining a spatial-alignment mechanism using expression-aware landmarks for precise motion alignment and an expert transformer with adaptive LayerNorm facilitates deep fusion between facial features and video dynamics to enhance identity consistency. Furthermore, a multistage training strategy is designed to improve model performance, progressively improving full body motion integration, expression reconstruction, and temporal consistency refinement. This comprehensive design allows SkyActor to produce high-fidelity, temporally stable animations that are adaptable to diverse compositions, making it suitable for applications such as virtual avatars, video conferencing, and digital content creation.
+            We present SkyActor, a simple yet effective framework built on a diffusion transformer architecture for character image animation. Unlike most existing methods restricted to head-only animation, SkyActor extends its capabilities to half-body compositions, enabling richer and more dynamic character performances. To address the primary challenges in character image animation—preserving identity, accurately transferring target motion, and ensuring temporal consistency and fidelity—SkyActor leverages the powerful generative capabilities of a DiT-based framework. It integrates a spatial-alignment mechanism with expression-aware landmarks for precise motion alignment and an expert transformer with adaptive LayerNorm to facilitate deep fusion between facial features and video dynamics, enhancing identity consistency. Additionally, SkyActor employs a multistage training strategy to progressively refine model performance, focusing on improved half-body motion integration, expression reconstruction, and temporal consistency. This comprehensive design enables SkyActor to generate high-fidelity, temporally stable animations adaptable to diverse compositions, making it highly suitable for applications such as virtual avatars, video conferencing, and digital content creation.
           </p>
         </div>
       </div>
@@ -303,7 +303,7 @@
     <!-- <div class="container is-max-desktop"> -->
       <div class="columns is-centered has-text-centered">
         <div class="column custom-width">
-          <h2 class="title is-3">Introducing SkyActor</h2>
+          <h2 class="title is-3">Introducing SkyActor and Examples</h2>
           <div class="content has-text-justified" align="center">
             <div id="results-carousel" class="carousel results-carousel" align="center">
               <div class="item item-video11">
@@ -344,11 +344,12 @@
             </div>
 
           </div>
+          <p style="text-align: left; max-width: 1024px; margin-left: 100px;">SkyActor enables character image animation from a still image driven by a video, transferring not only the motion of talking head movements but also natural body dynamics, producing realistic and lifelike animations.</p>
     
         </div>
       </div>
   </div>
-  <!-- <p align="center">Qualitative comparison of customized video generation with both subjects and motions. <br>Without guidance from additional videos, our method significantly outperforms in terms of concept combination.</p> -->
+  <!-- <p align="center"> .</p> -->
 </section>
 
 
@@ -402,9 +403,9 @@
                 </video>
               </div>
             </div>
-
           </div>
-    
+          <p style="text-align: left; max-width: 1024px; margin-left: 100px;">The presented cases showcase animations with various head poses, including frontal and profile views, demonstrating our method's consistency and realism across perspectives.</p>
+
         </div>
       </div>
   </div>
@@ -446,7 +447,7 @@
                   type="video/mp4">
                 </video>
               </div>
-              <div class="item item-video5"></div>
+              <div class="item item-video5">
                 <video preload="auto"poster="" id="video5" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
                   <source src="static/videos/real5.mp4"
@@ -454,9 +455,9 @@
                 </video>
               </div>
             </div>
-
           </div>
-    
+          <p style="text-align: left; max-width: 1024px; margin-left: 100px; ">The presented cases demonstrate the effectiveness of our method across various aspect ratios in both generated and real images, ensuring consistent and realistic animations.</p>
+
         </div>
       </div>
   </div>
@@ -495,6 +496,7 @@
               <div class="item item-video4">
                 <video preload="auto"poster="" id="video4" autoplay controls muted loop width="1024px">
                   <!-- Your video preload="auto"file here -->
+    
                   <source src="static/videos/exp4.mp4"
                   type="video/mp4">
                 </video>
@@ -502,7 +504,7 @@
             </div>
 
           </div>
-    
+          <p style="text-align: left; max-width: 1024px; margin-left: 100px;">The SkyActor also highlights the effectiveness of our method in handling animations with large-scale facial expressions.</p>
         </div>
       </div>
   </div>
@@ -528,28 +530,28 @@
                 </video>
               </div>
               <div class="item item-video2">
-                <video preload="auto"poster="" id="web_demo2" autoplay controls muted loop width="1024px">
+                <video preload="auto"poster="" id="web_demo2" autoplay controls muted loop width="4096px">
                   <!-- Your video preload="auto"file here -->
                   <source src="static/videos/web_demo2.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video3">
-                <video preload="auto"poster="" id="web_demo3" autoplay controls muted loop width="1024px">
+                <video preload="auto"poster="" id="web_demo3" autoplay controls muted loop width="4096px">
                   <!-- Your video preload="auto"file here -->
                   <source src="static/videos/web_demo3.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video4">
-                <video preload="auto"poster="" id="web_demo4" autoplay controls muted loop width="1024px">
+                <video preload="auto"poster="" id="web_demo4" autoplay controls muted loop width="4096px">
                   <!-- Your video preload="auto"file here -->
                   <source src="static/videos/web_demo4.mp4"
                   type="video/mp4">
                 </video>
               </div>
               <div class="item item-video5">
-                <video preload="auto"poster="" id="web_demo5" autoplay controls muted loop width="1024px">
+                <video preload="auto"poster="" id="web_demo5" autoplay controls muted loop width="4096px">
                   <!-- Your video preload="auto"file here -->
                   <source src="static/videos/web_demo5.mp4"
                   type="video/mp4">
